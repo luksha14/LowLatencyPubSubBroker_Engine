@@ -118,4 +118,4 @@ The provided images confirm the full system operation, including:
 ---
 ## 🧑‍💻 Author
 
-Luka Mikulić
+**Luka Mikulić**
