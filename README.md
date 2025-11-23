@@ -11,7 +11,7 @@ The project is based on an architecture where the Broker acts as the central hub
 | Component | Role | Key Technologies |
 | :--- | :--- | :--- |
 | **`Broker`** | Server (TCP Acceptor). Manages all client sessions and routes messages. | `boost::asio::io_context`, Multithreading, `ClientSession`, `SubscriptionManager`, `steady_timer` for cleanup. |
-| **`Publisher`** | Client that sends a continuous stream of binary `TradeMessage` packets to the Broker. | Synchronous TCP connection, C++ `std::random` for data generation. |
+| **`Publisher`** | Client that sends a continuous stream of binary `TradeMessage` packets to the Broker. | **Asynchronous TCP connection**, C++ `std::random` for data generation. |
 | **`Subscriber`** | Client that subscribes to specific topics. Receives and decodes the binary data stream asynchronously. | Asynchronous TCP connection, `boost::asio::async_read`. |
 
 ---
